@@ -24,6 +24,9 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.get("https://zglemantimestamp.glitch.me/api/timestamp/:date_string?", function(req, res){
+  
+});
 
 
 // listen for requests :)
