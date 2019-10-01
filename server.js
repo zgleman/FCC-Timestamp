@@ -26,6 +26,10 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/timestamp/:date_string?", function(req, res){
   var dateString = req.params.date_string;
+  if (dateString == ""){
+    dateString = new Date();
+  }
+  console.log(new Date(dateString));
   res.json({test: dateString}); 
 });
 
