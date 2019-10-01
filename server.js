@@ -26,11 +26,15 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/timestamp/:date_string?", function(req, res){
   var dateString = req.params.date_string;
-  if (dateString == ""){
+  if (dateString == undefined){
     dateString = new Date();
   }
-  console.log(new Date(dateString));
-  res.json({test: dateString}); 
+  var date = new Date(dateString);
+  if ()
+  var unixDate = date.getTime();
+  var utcDate = date.toUTCString();
+  res.json({"unix": unixDate,
+           "utc": utcDate}); 
 });
 
 
