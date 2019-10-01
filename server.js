@@ -25,7 +25,7 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("https://zglemantimestamp.glitch.me/api/timestamp/:date_string?", function(req, res){
-  
+  new Date(date_string) 
 });
 
 
