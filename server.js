@@ -26,13 +26,13 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/timestamp/:date_string?", function(req, res){
   var dateString = req.params.date_string;
-  var regex = /[0-9]*/;
+  var regex = /[0-9]{13}/;
   if (dateString == undefined){
     dateString = new Date();
-  };
-  if (dateString.match(regex)){
+  } else if (dateString.match(regex)){
     dateString = Number(dateString);
-  };
+  }; 
+   
   var date = new Date(dateString);
   console.log(date);
   if (date == 'Invalid Date'){
